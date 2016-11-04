@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>リーグ</h2>
+    <table border=”1″>
+      <tr>
+        <th>順位</th>
+        <th>チーム名</th>
+        <th>勝点</th>
+        <th>試合数</th>
+        <th>勝</th>
+        <th>分</th>
+        <th>負</th>
+        <th>得点</th>
+        <th>失点</th>
+        <th>得失点</th>
+      </tr>
+        {% for team in object_list|dictsortreversed:"points" %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ team.name }}</td>
+            <td>{{ team.points }}</td>
+            <td>{{ team.total_match_num }}</td>
+            <td>{{team.win.all|length}}</td>
+            <td>{{team.draw.all|length}}</td>
+            <td>{{team.lose.all|length}}</td>
+            <td>{{ team.score }}</td>
+            <td>{{ team.anscore }}</td>
+            <td>{{ team.score_dif }}</td>
+          </tr>
+        {% endfor %}
+    </table>
+
+    <table border=”1″>
+      <tr>
+        <th>X</th>
+        {% for team in object_list %}
+        <th>{{ team.name }}</th>
+        {% endfor %}
+      </tr>
+        {% for team in object_list|dictsortreversed:"points" %}
+          <tr>
+            <th>{{ team.name }}</th>
+            
+          </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
