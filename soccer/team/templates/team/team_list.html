@@ -31,18 +31,4 @@
         {% endfor %}
     </table>
 
-    <table border=”1″>
-      <tr>
-        <th>X</th>
-        {% for team in object_list %}
-        <th>{{ team.name }}</th>
-        {% endfor %}
-      </tr>
-        {% for team in object_list|dictsortreversed:"points" %}
-          <tr>
-            <th>{{ team.name }}</th>
-            
-          </tr>
-        {% endfor %}
-    </table>
 {% endblock %}
