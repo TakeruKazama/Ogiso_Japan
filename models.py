@@ -18,7 +18,7 @@ class Event(models.Model):
     )
 
     name = models.CharField(max_length=100)
-    rule = models.CharField(choices=RULE_CHOICES, default=0)
+    rule = models.IntegerField(choices=RULE_CHOICES, default=0)
     set_to_win = models.IntegerField(default=3)
     member = models.ManyToManyField(Player)
 
