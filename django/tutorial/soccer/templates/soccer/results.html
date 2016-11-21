@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    {% for result in game_result %}
+    {{ result.team }}
+    {{ result.opponent }}
+    {{ result.year }}
+    {{ result.result }}
+    <br>
+    {% endfor %}
+  </body>
+</html>
