@@ -29,8 +29,8 @@ class Game(models.Model):
 
     event = models.ForeignKey(Event)
     match_number = models.IntegerField()
-    player1 = models.ForeignKey(Player)
-    player2 = models.ForeignKey(Player)
+    player1 = models.ForeignKey(Player, related_name='player1')
+    player2 = models.ForeignKey(Player, related_name='player2')
 
 
 class Point(models.Model):
