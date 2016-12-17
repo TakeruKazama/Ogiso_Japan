@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}リーグ戦{% endblock title %}
+
+{% block extrahead %}
+<style>
+table {
+  margin-top: 8px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<table border=”1″>
+  <tr>
+    <th>X</th>
+    <th>風間</th>
+    <th>宮澤</th>
+    <th>長安</th>
+
+    <th>勝敗</th>
+    <th>順位</th>
+  </tr>
+  <tr>
+    <th>風間</th>
+    <td>X</td>
+    <td><table border=”1″><td>1</td><td>5-3<br>1-5<br>2-5</td><td>2</td></table></td>
+    <td><a href="./result.html">入力</a></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <th>宮澤</th>
+    <td bgcolor="#ffff00"><table border=”1″><td>2</td><td>3-5<br>5-1<br>5-2</td><td>1</td></table></td>
+    <td>X</td>
+    <td><table border=”1″><td>0</td><td>3-5<br>2-5<br>0-5</td><td>3</td></table></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <th>長安</th>
+    <td><a href="./result.html">入力</a></td>
+    <td bgcolor="#ffff00"><table border=”1″><td>3</td><td>5-3<br>5-2<br>5-0</td><td>0</td></table></td>
+    <td>X</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <th>対戦順</th>
+  </tr>
+</table>
+{% endblock content %}
